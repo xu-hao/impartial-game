@@ -1,0 +1,44 @@
+name:                impartial-game
+version:             0.1.0.0
+synopsis:            A Haskell implementation of impartial games, and calculating their nimbers, or Grundy numbers, according to Sprague-Grundy theorem
+description:         Please see README.md
+homepage:            https://github.com/githubuser/impartial-game#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Hao Xu
+maintainer:          xuh@email.unc.edu
+copyright:           2016 Hao Xu
+category:            Data
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable Kayles
+  hs-source-dirs:      test
+  main-is:     Kayles.hs
+  build-depends:       base >= 4.7 && < 5
+                     , impartial-game
+  default-language:    Haskell2010
+  ghc-options:
+
+executable 2Nimo
+  hs-source-dirs:      test
+  main-is:     2Nimo.hs
+  build-depends:       base >= 4.7 && < 5
+                     , impartial-game
+  default-language:    Haskell2010
+  ghc-options:
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Data.Game.Impartial Data.Game.Impartial.Impartial Data.Game.Impartial.Product Data.Game.Impartial.Injection Data.Game.Impartial.Base Data.Game.Impartial.Sum Data.Game.Impartial.Simple
+  build-depends:       base >= 4.7 && < 5
+                     , vector
+                     , containers
+                     , nimber
+  default-language:    Haskell2010
+  ghc-options:
+
+source-repository head
+  type:     git
+  location: https://github.com/xu-hao/impartial-game
